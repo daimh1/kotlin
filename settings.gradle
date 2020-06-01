@@ -38,6 +38,8 @@ plugins {
 def buildProperties = BuildPropertiesKt.getKotlinBuildPropertiesForSettings(settings)
 def projectVersions = file("./gradle/versions.properties").text
 
+println("kotlin.build.scan.url: ${getProperty("kotlin.build.scan.url")}")
+
 gradleEnterprise {
     buildScan {
         if (buildProperties.buildScanServer != null) {
